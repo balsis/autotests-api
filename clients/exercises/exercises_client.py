@@ -7,14 +7,14 @@ from typing import TypedDict
 
 class GetExercisesQueryDict(TypedDict):
     """
-    Описание структуры запроса на получение списка упражнений.
+    Описание структуры запроса на получение списка заданий для определенного курса.
     """
     courseId: str
 
 
 class CreateExerciseRequestDict(TypedDict):
     """
-    Описание структуры запроса на создание упражнения.
+    Описание структуры запроса на создание задания.
     """
     title: str
     courseId: str
@@ -27,7 +27,7 @@ class CreateExerciseRequestDict(TypedDict):
 
 class UpdateExerciseRequestDict(TypedDict):
     """
-    Описание структуры запроса на обновление упражнения.
+    Описание структуры запроса на обновление данных задания.
     """
     title: str | None
     maxScore: int | None
@@ -39,7 +39,7 @@ class UpdateExerciseRequestDict(TypedDict):
 
 class ExercisesClient(APIClient):
     """
-      Клиент для работы с /api/v1/exercises
+    Клиент для работы с /api/v1/exercises
     """
 
     def get_exercises_api(self, query: GetExercisesQueryDict) -> Response:
@@ -62,7 +62,7 @@ class ExercisesClient(APIClient):
 
     def create_exercise_api(self, request: CreateExerciseRequestDict) -> Response:
         """
-        Метод создания упражнения.
+        Метод создания задания.
 
         :param request: Словарь title, courseId, maxScore, minScore, orderIndex, description, estimatedTime
         :return: Ответ от сервера в виде объекта httpx.Response
@@ -71,7 +71,7 @@ class ExercisesClient(APIClient):
 
     def update_exercise_api(self, exercise_id: str, request: UpdateExerciseRequestDict) -> Response:
         """
-        Метод обновления задания
+        Метод обновления данных задания
 
         :param exercise_id: Идентификатор задания.
         :param request: Словарь с title, maxScore, minScore, orderIndex, description, estimatedTime
