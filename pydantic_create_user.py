@@ -16,7 +16,7 @@ class CreateUserRequestSchema(BaseModel):
     """
     Описание структуры запроса на создание пользователя.
     """
-    email: EmailStr = Field(max_length=10)
+    email: EmailStr = Field(max_length=250)
     password: constr(min_length=1, max_length=250)
     last_name: constr(min_length=1, max_length=50) = Field(alias="lastName")
     first_name: constr(min_length=1, max_length=50) = Field(alias="firstName")
@@ -28,5 +28,3 @@ class CreateUserResponseSchema(BaseModel):
     Описание структуры ответа создания пользователя.
     """
     user: UserSchema
-
-
