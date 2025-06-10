@@ -51,7 +51,7 @@ class PrivateUsersClient(APIClient):
         Метод получения текущего пользователя.
 
         :param user_id: Идентификатор пользователя.
-        :return: Ответ от сервера в виде объекта GetUserResponseDict
+        :return: Ответ от сервера в виде объекта GetUserResponseSchema
         """
         response = self.get_user_api(user_id)
         return GetUserResponseSchema.model_validate_json(response.text)

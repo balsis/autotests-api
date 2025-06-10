@@ -33,7 +33,7 @@ class AuthenticationClient(APIClient):
         Метод аутентифицирует пользователя и возвращает структуру с токенами.
 
         :param request: Словарь с email и password.
-        :return: Структура LoginResponseDict с вложенными токенами.
+        :return: Структура LoginResponseSchema с вложенными токенами.
         """
         response = self.login_api(request)
         return LoginResponseSchema.model_validate_json(response.text)

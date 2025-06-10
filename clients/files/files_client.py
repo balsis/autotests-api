@@ -46,7 +46,7 @@ class FilesClient(APIClient):
         Метод создания файла.
 
         :param request: Словарь с filename, directory, upload_file.
-        :return: Ответ от сервера в виде объекта CreateFileResponseDict
+        :return: Ответ от сервера в виде объекта CreateFileResponseSchema
         """
         response = self.create_file_api(request)
         return CreateFileResponseSchema.model_validate_json(response.text)

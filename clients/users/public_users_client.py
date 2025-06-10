@@ -24,7 +24,7 @@ class PublicUsersClient(APIClient):
         Метод выполняет создание пользователя.
 
         :param request: Словарь с email, password, lastName, firstName, middleName.
-        :return: Ответ от сервера в виде объекта CreateUserResponseDict
+        :return: Ответ от сервера в виде объекта CreateUserResponseSchema
         """
         response = self.create_user_api(request)
         return CreateUserResponseSchema.model_validate_json(response.text)
