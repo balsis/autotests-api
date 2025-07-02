@@ -1,3 +1,5 @@
+import httpx
+
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, FileSchema, GetFileResponseSchema
 from tools.assertions.base import assert_equal
 
@@ -15,6 +17,17 @@ def assert_create_file_response(request: CreateFileRequestSchema, response: Crea
     assert_equal(response.file.filename, request.filename, name="filename")
     assert_equal(response.file.directory, request.directory, name="filename")
     assert_equal(str(response.file.url), expected_url, name="url")
+
+
+def assert_file_is_accessible(url: str):
+    """
+    Проверяет, что файл доступен по указанному URL.
+
+    :param url: Ссылка на файл.
+    :raises AssertionError: Если файл не доступен.
+    """
+    response = httpx.get(url)
+    assert response.status_code == 200, f"Файл недоступен по URL: {url}"
 
 
 def assert_file(actual: FileSchema, expected: FileSchema):
