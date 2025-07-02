@@ -1,5 +1,3 @@
-import httpx
-
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, FileSchema, GetFileResponseSchema
 from tools.assertions.base import assert_equal
 
