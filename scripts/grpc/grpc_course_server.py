@@ -1,7 +1,7 @@
 from concurrent import futures
 import grpc
 
-import course_service_pb2
+from scripts.grpc_client_server import course_service_pb2
 import course_service_pb2_grpc
 
 

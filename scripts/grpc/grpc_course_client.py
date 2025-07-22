@@ -1,6 +1,6 @@
 import grpc
 
-import course_service_pb2
+from scripts.grpc_client_server import course_service_pb2
 import course_service_pb2_grpc
 
 channel = grpc.insecure_channel('localhost:50051')
