@@ -71,10 +71,10 @@ def assert_create_file_with_empty_filename_response(actual: ValidationErrorRespo
         details=[
             ValidationErrorSchema(
                 type="string_too_short",
+                ctx={"min_length": 1},
                 input="",
-                context={"min_length": 1},
-                message="String should have at least 1 character",
-                location=["body", "filename"]
+                msg="String should have at least 1 character",
+                loc=["body", "filename"]
             )
         ]
     )
@@ -83,7 +83,7 @@ def assert_create_file_with_empty_filename_response(actual: ValidationErrorRespo
 
 def assert_create_file_with_empty_directory_response(actual: ValidationErrorResponseSchema):
     """
-    Проверяет, что ответ на создание файла с пустым значением директории соответствует ожидаемой валидационной ошибке.
+    Проверяет, что ответ на создание файла c некорректным file_id соответствует ожидаемой валидационной ошибке.
 
     :param actual: Ответ от API с ошибкой валидации, который необходимо проверить.
     :raises AssertionError: Если фактический ответ не соответствует ожидаемому.
@@ -96,6 +96,33 @@ def assert_create_file_with_empty_directory_response(actual: ValidationErrorResp
                 context={"min_length": 1},
                 message="String should have at least 1 character",
                 location=["body", "directory"]
+            )
+        ]
+    )
+    assert_validation_error_response(actual, expected)
+
+
+def assert_get_file_with_incorrect_file_id_response(actual: ValidationErrorResponseSchema):
+    """
+    Проверяет, что ответ API на запрос файла с некорректным file_id
+    соответствует ожидаемому формату ошибки валидации.
+
+    :param actual: Фактический ответ API с ошибкой валидации
+    :raises AssertionError: Если фактический ответ не соответствует ожидаемому
+    """
+    expected = ValidationErrorResponseSchema(
+        details=[
+            ValidationErrorSchema(
+                type="uuid_parsing",
+                input="incorrect-file-id",
+                context={
+                    "error": "invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"
+                },
+                message="Input should be a valid UUID, invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1",
+                location=[
+                    "path",
+                    "file_id"
+                ]
             )
         ]
     )
