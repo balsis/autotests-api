@@ -6,16 +6,22 @@ import pytest
 from clients.authentication.authentication_client import AuthenticationClient
 from clients.authentication.authentication_schema import LoginResponseSchema, LoginRequestSchema
 from fixtures.users import UserFixture
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
 from tools.allure.tags import AllureTag
 from tools.assertions.authentication import assert_login_response
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
 
 
-@allure.tag(AllureTag.REGRESSION, AllureTag.AUTHENTICATION)  # Добавили теги
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeature.AUTHENTICATION)
+@allure.tag(AllureTag.REGRESSION, AllureTag.AUTHENTICATION)
 @pytest.mark.regression
 @pytest.mark.authentication
 class TestAuthentication:
+    @allure.story(AllureStory.LOGIN)
     @allure.title("Login with correct email and password")
     def test_login(self, function_user: UserFixture, authentication_client: AuthenticationClient):
         request = LoginRequestSchema(email=function_user.email, password=function_user.password)
