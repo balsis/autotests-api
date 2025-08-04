@@ -21,7 +21,9 @@ from tools.assertions.schema import validate_json_schema
 
 
 @allure.epic(AllureEpic.LMS)
+@allure.parent_suite(AllureEpic.LMS)
 @allure.feature(AllureFeature.COURSES)
+@allure.suite(AllureFeature.COURSES)
 @allure.tag(AllureTag.COURSES, AllureTag.REGRESSION)
 @pytest.mark.courses
 @pytest.mark.regression
@@ -30,6 +32,7 @@ class TestCourses:
     @allure.severity(Severity.BLOCKER)
     @allure.tag(AllureTag.GET_ENTITIES)
     @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     @allure.title("Create course")
     def test_create_course(self, courses_client: CoursesClient, function_user: UserFixture, function_file: FileFixture):
         request = CreateCourseRequestSchema(
@@ -46,6 +49,7 @@ class TestCourses:
     @allure.severity(Severity.BLOCKER)
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.GET_ENTITIES)
+    @allure.sub_suite(AllureStory.GET_ENTITIES)
     @allure.title("Get courses")
     def test_get_courses(self, courses_client: CoursesClient, function_user: UserFixture, function_course: CourseFixture):
         query = GetCoursesQuerySchema(user_id=function_user.response.user.id)
@@ -58,6 +62,7 @@ class TestCourses:
     @allure.severity(Severity.CRITICAL)
     @allure.tag(AllureTag.UPDATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     @allure.title("Update course")
     def test_update_course(self, courses_client: CoursesClient, function_course: CourseFixture):
         request = UpdateCourseRequestSchema()
