@@ -2,6 +2,7 @@ from http import HTTPStatus
 
 import allure
 import pytest
+from allure_commons.types import Severity
 
 from clients.courses.courses_client import CoursesClient
 from clients.courses.courses_schema import (UpdateCourseRequestSchema, UpdateCourseResponseSchema, GetCoursesQuerySchema, GetCoursesResponseSchema,
@@ -26,6 +27,7 @@ from tools.assertions.schema import validate_json_schema
 @pytest.mark.regression
 class TestCourses:
 
+    @allure.severity(Severity.BLOCKER)
     @allure.tag(AllureTag.GET_ENTITIES)
     @allure.story(AllureStory.CREATE_ENTITY)
     @allure.title("Create course")
@@ -41,6 +43,7 @@ class TestCourses:
 
         validate_json_schema(response.json(), CreateCourseResponseSchema.model_json_schema())
 
+    @allure.severity(Severity.BLOCKER)
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.GET_ENTITIES)
     @allure.title("Get courses")
@@ -52,6 +55,7 @@ class TestCourses:
         assert_get_courses_response(response_data, [function_course.response])
         validate_json_schema(response.json(), GetCoursesResponseSchema.model_json_schema())
 
+    @allure.severity(Severity.CRITICAL)
     @allure.tag(AllureTag.UPDATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)
     @allure.title("Update course")

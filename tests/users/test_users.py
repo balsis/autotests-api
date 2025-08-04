@@ -2,6 +2,7 @@ from http import HTTPStatus
 
 import allure
 import pytest
+from allure_commons.types import Severity
 
 from clients.users.private_users_client import PrivateUsersClient
 from clients.users.public_users_client import PublicUsersClient
@@ -25,6 +26,7 @@ from tools.fakers import fake
 class TestUsers:
 
     @pytest.mark.parametrize("email", ['mail.ru', 'gmail.com', 'example.com'])
+    @allure.severity(Severity.BLOCKER)
     @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
     @allure.title("Create user")
     @allure.tag(AllureTag.CREATE_ENTITY)
@@ -38,6 +40,7 @@ class TestUsers:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.severity(Severity.CRITICAL)
     @allure.story(AllureStory.GET_ENTITY)  # Добавили story
     @allure.tag(AllureTag.GET_ENTITY)
     @allure.title("Get user me")

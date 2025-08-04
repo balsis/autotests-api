@@ -2,6 +2,7 @@ from http import HTTPStatus
 
 import allure
 import pytest
+from allure_commons.types import Severity
 
 from clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
 from clients.files.files_client import FilesClient
@@ -26,9 +27,10 @@ from tools.assertions.schema import validate_json_schema
 @pytest.mark.regression
 class TestFiles:
 
+    @allure.severity(Severity.BLOCKER)
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)
-    @allure.title("Create title")
+    @allure.title("Create file")
     def test_create_file(self, files_client: FilesClient):
         request = CreateFileRequestSchema(upload_file="./testdata/files/image.png")
         response = files_client.create_file_api(request)
@@ -38,9 +40,10 @@ class TestFiles:
         assert_create_file_response(request=request, response=response_data)
         validate_json_schema(instance=response.json(), schema=response_data.model_json_schema())
 
+    @allure.severity(Severity.BLOCKER)
     @allure.tag(AllureTag.GET_ENTITY)
     @allure.story(AllureStory.GET_ENTITY)
-    @allure.title("Get title")
+    @allure.title("Get file")
     def test_get_file(self, files_client: FilesClient, function_file: FileFixture):
         response = files_client.get_file_api(function_file.response.file.id)
         response_data = GetFileResponseSchema.model_validate_json(response.text)
@@ -51,7 +54,7 @@ class TestFiles:
 
     @allure.tag(AllureTag.VALIDATE_ENTITY)
     @allure.story(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Create title with empty filename")
+    @allure.title("Create file with empty filename")
     def test_create_file_with_empty_filename(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             filename="",
@@ -64,9 +67,10 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.severity(Severity.NORMAL)
     @allure.tag(AllureTag.VALIDATE_ENTITY)
     @allure.story(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Create title with empty directory")
+    @allure.title("Create file with empty directory")
     def test_create_file_with_empty_directory(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             directory="",
@@ -80,6 +84,7 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.severity(Severity.NORMAL)
     @allure.tag(AllureTag.DELETE_ENTITY)
     @allure.story(AllureStory.DELETE_ENTITY)
     @allure.title("Delete file")
@@ -95,6 +100,7 @@ class TestFiles:
 
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
 
+    @allure.severity(Severity.NORMAL)
     @allure.tag(AllureTag.VALIDATE_ENTITY)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.title("Get file with incorrect file id")
