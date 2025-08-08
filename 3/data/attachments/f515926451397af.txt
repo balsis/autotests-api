@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjIyLjc0NDIwMSIsInVzZXJfaWQiOiIzNzM2ODNlOC0wOTg4LTQ4MjEtOGU3Mi0wY2U1MGEyNjEyNmIifQ.KZOjXKmB5HeR4cxY5rJxMpyWZ5quahxhWhfoE1sT3io' \
+  -H 'content-length: 411' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fight land significant direction even indicate.","maxScore":77,"minScore":24,"description":"Hand general take call pull building. Good change firm different new democratic.\nSport Mr discover once measure positive. Happy rule low ability mission stop important.","estimatedTime":"3 weeks","previewFileId":"e38bbe16-478e-4cf5-a609-2f10d7433ac2","createdByUserId":"373683e8-0988-4821-8e72-0ce50a26126b"}'

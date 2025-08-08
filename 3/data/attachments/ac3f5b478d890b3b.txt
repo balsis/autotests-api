@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjI0Ljc3NTIxOSIsInVzZXJfaWQiOiI2ZDc3YmE4MS01YTg0LTRmZDYtODBmOS1mNjA5ODhmOGZiNjgifQ.fObeaHL_ahymCu6hCRcqmkHWYUw7MYTpOaoWLTPDmdQ' \
+  -H 'content-length: 337' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Way of question approach right according reach now.","maxScore":73,"minScore":3,"description":"Big enjoy minute source situation. Whole picture responsibility when determine brother rich.","estimatedTime":"8 weeks","previewFileId":"82756f5c-c922-4304-9465-c099765425c0","createdByUserId":"6d77ba81-5a84-4fd6-80f9-f60988f8fb68"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjIyLjc0NDIwMSIsInVzZXJfaWQiOiIzNzM2ODNlOC0wOTg4LTQ4MjEtOGU3Mi0wY2U1MGEyNjEyNmIifQ.KZOjXKmB5HeR4cxY5rJxMpyWZ5quahxhWhfoE1sT3io' \
+  -H 'content-length: 341' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Energy red left quickly risk blue activity stock.","courseId":"855172e4-bfa6-4542-b7b2-8a72de4cf742","maxScore":100,"minScore":15,"orderIndex":66,"description":"Another little sport his serious media. Onto Congress who source fear about capital ago. Eight effect mind myself music. Eye idea travel hard.","estimatedTime":"6 weeks"}'

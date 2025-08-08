@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjIyLjEwODk4MyIsInVzZXJfaWQiOiIxZWZiMDg2OS01N2UwLTRjNDEtODc3Mi1iOGI4MjIwMzRlOWIifQ.IlPT6c081a98hKR_d5I-lFxYiCLMcfWCwXtuRGT7F2w' \
+  -H 'content-length: 383' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discuss indicate audience argue politics current discuss.","maxScore":65,"minScore":29,"description":"Example mind somebody five time something. Including development me behind check play. Be fund pick brother student culture arrive.","estimatedTime":"6 weeks","previewFileId":"679a179c-b046-487d-9476-f66519a54105","createdByUserId":"1efb0869-57e0-4c41-8772-b8b822034e9b"}'

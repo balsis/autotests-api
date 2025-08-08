@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/6f96b7a5-312d-455b-8398-13e010f8b62d' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjIyLjEwODk4MyIsInVzZXJfaWQiOiIxZWZiMDg2OS01N2UwLTRjNDEtODc3Mi1iOGI4MjIwMzRlOWIifQ.IlPT6c081a98hKR_d5I-lFxYiCLMcfWCwXtuRGT7F2w' \
+  -H 'content-length: 271' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Suffer effect different country science floor run family.","maxScore":61,"minScore":21,"description":"Be place phone participant character not culture safe. Turn physical try believe job. Line bank natural computer know professional.","estimatedTime":"5 weeks"}'

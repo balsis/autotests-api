@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjIzLjQzNTUxOCIsInVzZXJfaWQiOiJlMTI2YzgwZS0yMzYzLTRiMWUtOGRkZC1iYjMyODA1MGRkNzkifQ.IuqzCaBfRqK4MvAWzDnYRv1-naffHze7B6cZO25CYOQ' \
+  -H 'content-length: 424' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Enjoy scientist pull politics most police win product.","maxScore":58,"minScore":8,"description":"Use stage any either. Lose decision social. Form south they report next.\nStrategy require see range. Respond tree they rock town. Summer crime value that. Ask every interview.","estimatedTime":"9 weeks","previewFileId":"8ad4b297-cb8d-4595-8c73-dbec118f0646","createdByUserId":"e126c80e-2363-4b1e-8ddd-bb328050dd79"}'

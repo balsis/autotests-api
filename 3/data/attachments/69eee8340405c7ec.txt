@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjI1LjQ5MDAxOSIsInVzZXJfaWQiOiI4ZTNlNjc3Yy1kZjQ0LTQwMDctODBkZS0yMjMyNzQ4NDM3MTAifQ.tb08GcduHxvms88t-MaGCAJf9gXggXFlKP-FscoXdBA' \
+  -H 'content-length: 336' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Carry firm only national.","maxScore":76,"minScore":18,"description":"Everything under truth off. Appear person teacher reason. Plant service development trouble economic drive hold see.","estimatedTime":"9 weeks","previewFileId":"3c5139ff-6f68-448e-8fc8-c4376d5cc81c","createdByUserId":"8e3e677c-df44-4007-80de-223274843710"}'

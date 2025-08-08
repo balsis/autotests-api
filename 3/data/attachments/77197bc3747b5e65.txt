@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE4OjUzOjI0LjA2MjExNyIsInVzZXJfaWQiOiI5MTg3MzQ5Zi0yYTkzLTRlMWItYjE2Mi1iNTNiMWJlOTNhYzcifQ.DG2Ig32W9YOALnPgK_tFP29tdOw2Tt-EadVO5hShC2Y' \
+  -H 'content-length: 430' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Certain environment after position thus.","maxScore":98,"minScore":21,"description":"Statement arm toward future above degree film. Water floor reason. Article style southern north left trade. Trade beautiful the this.\nCommon run college site similar. Trade little style support.","estimatedTime":"3 weeks","previewFileId":"1dd6982f-d3b9-4828-a087-8f553522e262","createdByUserId":"9187349f-2a93-4e1b-b162-b53b1be93ac7"}'
