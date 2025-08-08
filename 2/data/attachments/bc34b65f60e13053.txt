@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE2OjAyOjU0LjQwNzAxOSIsInVzZXJfaWQiOiJhMjZjZWFhYS01Y2Q2LTQ5NmQtODI4OC0wYWIyNzA4NGJjYjUifQ.i_z7434FhZQg7jJROmc2KueG_pgbYwE1H7GouYgQgwY' \
+  -H 'content-length: 305' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tonight us their.","courseId":"89ce2ce1-58f7-453b-98ac-6ef6f09c8c39","maxScore":99,"minScore":20,"orderIndex":34,"description":"Part pass measure even identify executive. Only young last behavior.\nLike ok five understand. Mother picture because well partner prevent.","estimatedTime":"9 weeks"}'

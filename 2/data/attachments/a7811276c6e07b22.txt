@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE2OjAyOjUyLjAxMTY1NyIsInVzZXJfaWQiOiJkMDYzZmY3ZS1jYzIxLTRmZWYtYTE3My1kZWI2Njg5NDljYzEifQ.ovRsmTXvzG0GnPRctnynIN6mruLCf2RRYu0Qjoqd3zs' \
+  -H 'content-length: 399' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Plan for fact myself door.","maxScore":65,"minScore":8,"description":"Day receive safe wish assume range discuss. Reduce radio cost learn.\nRange space prove degree look look however. We appear become have morning. Half point recognize expert sense.","estimatedTime":"6 weeks","previewFileId":"11c8d114-192f-4aa0-9603-1a812ebc401a","createdByUserId":"d063ff7e-cc21-4fef-a173-deb668949cc1"}'

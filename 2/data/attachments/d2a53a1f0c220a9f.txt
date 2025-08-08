@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE2OjAyOjUzLjE4NDMwMyIsInVzZXJfaWQiOiIzZGU0OTdmNS0wYjk5LTQ3MWUtOTVkNi01YjgyNjFhZjJhM2MifQ.ou7AzxxsFAh6594pL2mZ7pp47BmDbCKpAv5CPfj_t-0' \
+  -H 'content-length: 426' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Result speak tend bring president service country.","maxScore":51,"minScore":20,"description":"Matter step wish. Order attack marriage chance week ask begin. Return actually half think sit decide.\nForm successful system inside safe. Beyond likely yourself tree see good yard.","estimatedTime":"3 weeks","previewFileId":"87689107-fac9-42d6-83a7-2fdbc6514566","createdByUserId":"3de497f5-0b99-471e-95d6-5b8261af2a3c"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE2OjAyOjUxLjQxMjAzNiIsInVzZXJfaWQiOiI1ZjZmMDYwMS05NmIxLTRkMGYtYjg0YS1jNGY2ZmIwMDAyZGQifQ.wci6p1Uvbl9OHWbodOcfHBF8GEOP53WMiyjTf64UTwo' \
+  -H 'content-length: 408' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Consider specific themselves because.","maxScore":97,"minScore":5,"description":"Behind letter modern everyone western red huge. Happen in clearly amount sister show care ok.\nCheck thing someone reach affect read senior southern. Bad his series bring story.","estimatedTime":"6 weeks","previewFileId":"0933f2f8-2551-4b66-87e3-9a571ccba4c4","createdByUserId":"5f6f0601-96b1-4d0f-b84a-c4f6fb0002dd"}'

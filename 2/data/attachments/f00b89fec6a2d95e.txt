@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE2OjAyOjU1LjA1Mjg5OSIsInVzZXJfaWQiOiJmYWRiZjU2ZS1hNDYyLTQ4NDMtYmU3Zi02NTRjMjZkMWRjYWUifQ.Kw5m1AbQsdTkBYtsVr1TT_ZSSAWlyRdNIdq2RsmdtyU' \
+  -H 'content-length: 379' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bed on stage less floor.","maxScore":84,"minScore":24,"description":"Those thought above medical field. Expert in science so.\nDesign almost piece contain he. Who military check safe blue while season claim. If television voice.","estimatedTime":"10 weeks","previewFileId":"193c5c49-d2f2-4a7c-9ba7-d17057004e49","createdByUserId":"fadbf56e-a462-4843-be7f-654c26d1dcae"}'

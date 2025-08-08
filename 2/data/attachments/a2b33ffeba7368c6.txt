@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE2OjAyOjU1LjA1Mjg5OSIsInVzZXJfaWQiOiJmYWRiZjU2ZS1hNDYyLTQ4NDMtYmU3Zi02NTRjMjZkMWRjYWUifQ.Kw5m1AbQsdTkBYtsVr1TT_ZSSAWlyRdNIdq2RsmdtyU' \
+  -H 'content-length: 355' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Central plan loss political people.","courseId":"a403dfc8-d222-47fd-8d6f-818e09c52f4f","maxScore":62,"minScore":2,"orderIndex":51,"description":"Fly commercial rather husband. Risk visit health institution.\nWe what relationship back true watch. Different young early. Difficult trial smile station miss dark country.","estimatedTime":"6 weeks"}'

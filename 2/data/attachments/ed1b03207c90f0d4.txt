@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE2OjAyOjU0LjQwNzAxOSIsInVzZXJfaWQiOiJhMjZjZWFhYS01Y2Q2LTQ5NmQtODI4OC0wYWIyNzA4NGJjYjUifQ.i_z7434FhZQg7jJROmc2KueG_pgbYwE1H7GouYgQgwY' \
+  -H 'content-length: 380' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Forward appear yes raise quickly.","maxScore":52,"minScore":27,"description":"Would address appear gas into item in. Work reduce almost couple staff each.\nStand big eight clear simple. Seek account though forget garden free look.","estimatedTime":"2 weeks","previewFileId":"234e8abf-9064-45d6-9ffc-29b2ea086da0","createdByUserId":"a26ceaaa-5cd6-496d-8288-0ab27084bcb5"}'
